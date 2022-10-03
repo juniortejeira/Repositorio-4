@@ -5,7 +5,7 @@ const Tarea = (props) => {
   const [modoEdit, setModoEdit] = useState(false);//funcion que usaremos para editar
   const [editText, setEditText] = useState("");//fun que usaremos para editar el texto escrito
 
-  const editar = () => {
+  const edita = () => {
     setModoEdit(true);
     //damos valor inicial serModoEdit(true) para luego llamarlo
   };
@@ -25,13 +25,21 @@ const Tarea = (props) => {
     props.borrar(props.id);
   };
 
+  const comple = () => {//lo enlazamos con el props, para luego llamarlo al onClick={borrarTarea}
+    props.completado(props.id);
+  };
+  
+
   return (
     <div>
       {!modoEdit ? (
         <div className="tarea">
           <span>{props.tarea}</span>
-          <button onClick={editar} className="button">Editar</button>
+         {/*{props.echo ?<button onClick={edita} className="button">Editar</button> : null}*/}
+         {props.echo ? <button onClick={edita} className="button">Editar</button> : null}
           <button onClick={borrarTarea} className="button">Borrar</button>
+          <button onClick={comple} className="button">completado</button>
+
         </div>
       ) : (
         <form className="formEdit" onSubmit={submitEdit}>
