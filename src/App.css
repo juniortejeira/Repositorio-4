@@ -1,3 +1,19 @@
+.linea {
+  border-top: 1px solid #ccd1d1;
+
+  padding: 0;
+  margin: 20px auto 0 auto;
+  width: 70%;
+}
+
+.lineaTarea {
+  border-top: 1px solid #ccd1d1;
+
+  padding: 0;
+  margin: 20px auto 0 auto;
+  width: 87%;
+}
+
 .form {
   width: 80%;
   margin: 60px auto 0;
@@ -36,11 +52,19 @@
   margin: 20px 0 15px 0;
   display: grid;
   grid-template-columns: 3fr 1fr 1fr 1fr;
-  border:1px solid black;
-  
+  border: 1px solid black;
 }
 
-.button{
+.button {
   width: 100px;
-  
+}
+/*=====================*/
+.nuevoArray {
+  width: 80%;
+  margin: 150px auto 0;
+}
+
+.tareaH3 {
+  text-align: center;
+  font-size: 25px;
 }
